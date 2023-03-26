@@ -2,9 +2,10 @@ fetch("https://api.collectapi.com/pray/all?data.city=istanbul", {
   method: "GET",
   headers: {
     "content-type": "application/json",
-    "authorization": "apikey 0jU8W1NnOxWbo4MT1pwpX5:5chiX7gayXFMJgHnspXTz9"
+    "authorization": "apikey apikey 09XKKhxtV2zfvxpURYUffh:6JFN8lX9uK0iVV64baZdSk"
   }
 }).then(x => x.json()).then(d => {
+  console.log(d)
   document.getElementById("sahuri").innerHTML = d.result[0].saat
   document.getElementById("iftari").innerHTML = d.result[4].saat
   let kalan = hourandminute(d.result[4].saat)
@@ -15,39 +16,13 @@ fetch("https://api.collectapi.com/pray/all?data.city=nigde", {
   method: "GET",
   headers: {
     "content-type": "application/json",
-    "authorization": "apikey 0jU8W1NnOxWbo4MT1pwpX5:5chiX7gayXFMJgHnspXTz9"
+    "authorization": "apikey apikey 09XKKhxtV2zfvxpURYUffh:6JFN8lX9uK0iVV64baZdSk"
   }
 }).then(x => x.json()).then(d => {
   document.getElementById("sahurn").innerHTML = d.result[0].saat
   document.getElementById("iftarn").innerHTML = d.result[4].saat
   let kalan = hourandminute(d.result[4].saat)
   document.getElementById("kalann").innerHTML = kalan.join(":");
-})
-
-fetch("https://api.collectapi.com/pray/all?data.city=ankara", {
-  method: "GET",
-  headers: {
-    "content-type": "application/json",
-    "authorization": "apikey 0jU8W1NnOxWbo4MT1pwpX5:5chiX7gayXFMJgHnspXTz9"
-  }
-}).then(x => x.json()).then(d => {
-  document.getElementById("sahura").innerHTML = d.result[0].saat
-  document.getElementById("iftara").innerHTML = d.result[4].saat
-  let kalan = hourandminute(d.result[4].saat)
-  document.getElementById("kalana").innerHTML = kalan.join(":");
-})
-
-fetch("https://api.collectapi.com/pray/all?data.city=izmir", {
-  method: "GET",
-  headers: {
-    "content-type": "application/json",
-    "authorization": "apikey 0jU8W1NnOxWbo4MT1pwpX5:5chiX7gayXFMJgHnspXTz9"
-  }
-}).then(x => x.json()).then(d => {
-  document.getElementById("sahurz").innerHTML = d.result[0].saat
-  document.getElementById("iftarz").innerHTML = d.result[4].saat
-  let kalan = hourandminute(d.result[4].saat)
-  document.getElementById("kalanz").innerHTML = kalan.join(":");
 })
 
 function hourandminute(hours) {
