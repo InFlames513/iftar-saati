@@ -5,13 +5,14 @@ fetch("https://api.collectapi.com/pray/all?data.city=istanbul", {
     "authorization": "apikey apikey 09XKKhxtV2zfvxpURYUffh:6JFN8lX9uK0iVV64baZdSk"
   }
 }).then(x => x.json()).then(d => {
-  console.log(d)
+  // console.log(d)
   document.getElementById("sahuri").innerHTML = d.result[0].saat
   document.getElementById("iftari").innerHTML = d.result[4].saat
   let kalan = hourandminute(d.result[4].saat)
   document.getElementById("kalani").innerHTML = kalan.join(":");
 })
 
+/*
 fetch("https://api.collectapi.com/pray/all?data.city=nigde", {
   method: "GET",
   headers: {
@@ -23,7 +24,7 @@ fetch("https://api.collectapi.com/pray/all?data.city=nigde", {
   document.getElementById("iftarn").innerHTML = d.result[4].saat
   let kalan = hourandminute(d.result[4].saat)
   document.getElementById("kalann").innerHTML = kalan.join(":");
-})
+}) */
 
 function hourandminute(hours) {
   let date = new Date()
