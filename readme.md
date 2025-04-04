@@ -1,0 +1,2 @@
+# Hakkında
+ Ramazanları iftar saatlerini collectapiden çekip yansıtır. Bu projeyi 10. sınıfta yaptığım için birkaç çok bariz sorun var yakında gelecek güncellemeler ile api bilgileri gizlenecektir. Yaparken hostlamak kolay olsun diye nodejs kullanmamak için böyle bir şey yapmıştım.
